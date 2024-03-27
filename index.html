@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookShelf App</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+    <script defer src="assets/js/app.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="assets/img/logo.png" alt="BookShelf logo" class="logo-app">
+                <h1>Bookshelf<span>Apps.</span></h1>
+            </div>
+            <nav class="find-book">
+                <img src="assets/img/search.png" alt="logo-find">
+                <form action="" id="inputSearch">
+                    <div class="formInput">
+                        <input type="text" id="searchTitle" placeholder="Cari judul">
+                    </div>
+                    <button type="submit" id="buttonSearch">Cari</button>
+                </form>
+            </nav>
+
+        </div>
+    </header>
+    <main>
+        <section class="main">
+            <div class="profile">
+                <div class="profile-pict">
+                    <img src="assets/img/avatar.JPEG" alt="avatar">
+                </div>
+                <h1>Muhamad Rizki</h1>
+                <p>Jumlah buku</p>
+                <h2 id="jumlahBuku">0</h2>
+                <button id="addBook">+</button>
+                <h4>Tambah Buku</h4>
+
+            </div>
+        </section>
+        <section class="unread">
+            <h1>Belum Selesai Dibaca</h1>
+            <div class="bookshelf" id="unread">
+            </div>
+        </section>
+        <section class="read">
+            <h1>Selesai Dibaca</h1>
+            <div class="bookshelf" id="read">
+            </div>
+        </section>
+        <section id="modal-form">
+            <div class="modal-content">
+                <h2>Masukan Buku Baru</h2>
+                <form action="" id="inputBook">
+                    <div class="formInput">
+                        <input type="text" id="inputTitle" placeholder="Masukan Judul" required>
+                    </div>
+                    <div class="formInput">
+                        <input type="text" id="inputAuthor" placeholder="Masukan Penulis" required>
+                    </div>
+                    <div class="formInput">
+                        <input type="number" id="inputYear" placeholder="Tahun Terbit" required>
+                    </div>
+                    <div class="inputCheck">
+                        <label for="inputIsComplete">Selesai Dibaca</label>
+                        <input type="checkbox" id="inputIsComplete">
+                    </div>
+                    <div class="inputButton">
+                        <button type="button" id="close">Batal</button>
+                        <button type="submit" id="submitBook">Tambah</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section id="modal-edit">
+            <div class="modal-content">
+                <h2>Perbarui Data Buku</h2>
+                <form action="" id="inputEdit">
+                    <input type="text" id="inputIdBook" hidden>
+                    <div class="formInput">
+                        <input type="text" id="inputTitleEdit" placeholder="Masukan Judul">
+                    </div>
+                    <div class="formInput">
+                        <input type="text" id="inputAuthorEdit" placeholder="Masukan Penulis">
+                    </div>
+                    <div class="formInput">
+                        <input type="number" id="inputYearEdit" placeholder="Tahun Terbit">
+                    </div>
+                    <div class="inputButton">
+                        <button type="button" id="closeEdit">Batal</button>
+                        <button type="submit" id="submitBook">Simpan</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h3>BookshelfApps. Copyright &#169; 2024.</h3>
+    </footer>
+</body>
+
+</html>

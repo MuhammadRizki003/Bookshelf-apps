@@ -1,0 +1,309 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #F0F8FF;
+    font-family: sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+header > div.navbar{
+    width: 80%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+header>div.navbar>div.logo{
+    display: flex;
+    flex-direction: row;
+}
+header > div.navbar > div.logo > img{
+    width: 50px;
+    height: 50px;
+}
+header > div.navbar >  div.logo > h1{
+    font-size: 43px;
+    color: #16183E;
+}
+header > div.navbar> div.logo > h1 > span{
+    color: #5356FF;
+    font-size: 30px;
+}
+header div.navbar nav.find-book{
+    justify-self: end;
+    background-color: #F5F5F3;
+    padding: 0 10px;
+    border: none;
+    border-radius: 99px;
+    display: flex;
+    align-items: center;
+    width: 40%;
+    max-width: 500px;
+}
+header div.navbar nav.find-book form{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+header div.navbar nav.find-book img{
+    height: 20px;
+    width: 20px;
+}
+header div.navbar nav.find-book form div.formInput{
+    flex-grow: 3;
+}
+header div.navbar nav.find-book form div.formInput input{
+    border: none;
+    background-color: #F5F5F3;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+    color: grey;
+    font-size: 18px;
+    padding: 2px;
+    padding: 0 10px;
+}
+header div.navbar nav.find-book form button{
+    border: none;
+    padding: 0 10px;
+    font-size: 18px;
+    background-color: #F5F5F3;
+}
+
+/*End Header*/
+main{
+    width: 100%;
+    padding:0 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 60px;
+}
+section.main{
+    border-radius: 15px;
+    background-color: white;
+    width: 22%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+section.main div.profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+section.main div.profile div.profile-pict{
+    border: white solid 10px;
+    width:max-content;
+    border-radius: 999px;
+    margin-top: -50px;
+    display: flex;
+    justify-content: center
+}
+section.main div.profile div.profile-pict img{
+    border-radius: 999px;
+    width: 120px;
+    height: 120px;
+}
+section.main div.profile p{
+    color: grey;
+}
+section.main div.profile h2{
+    font-size: 30px;
+    color:#5356FF ;
+}
+section.main div.profile h4{
+    color: gray;
+    margin-bottom: 20px;
+    font-weight: lighter;
+}
+h2#jumlahBuku{
+    padding: 10px;
+}
+button#addBook{
+    background-color: #16183E;
+    width: 50px;
+    height: 50px;
+    color: white;
+    border: none;
+    border-radius: 999px;
+    font-size: 30px;
+    margin: 10px 10px 5px 10px;
+}
+section.unread,
+section.read {
+    width: 38%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px;
+    margin: 10px;
+    height: fit-content;
+    min-height: 208px;
+}
+section h1{
+    padding:20px;
+}
+section div.bookshelf{
+    display: flex;
+    flex-direction: column;
+}
+section div.bookshelf div.bookList{
+    padding: 0 20px 20px;
+    display: flex;
+    flex-direction: row;
+}
+section div.bookshelf div.bookList img{
+    width: 80px;
+    height: 120px;
+}
+section div.bookshelf div.bookList div.bookInfo{
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+section div.bookshelf div.bookList  div.bookInfo p{
+    color: gray;
+}
+section div.bookshelf div.bookList div.bookInfo div.infoButton{
+    flex-grow: 2;
+    display: flex;
+    align-items: flex-end;
+    
+}
+section div.bookshelf div.bookList  div.bookInfo div.infoButton button{
+    width: 35px;
+    height: 35px;
+    border-radius: 999px;
+    border: none;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section div.bookshelf div.bookList  div.bookInfo div.infoButton button img{
+    width: 20px;
+    height: 20px;
+}
+.edit{
+    background-color: #2c67d4;
+}
+.done{
+    background-color: #30dd2a;
+}
+.delete{
+    background-color: #e61a1a;
+}
+.replay{
+    background-color: #d1d422;
+}
+section#modal-form,
+section#modal-edit{
+    top: 0;
+    z-index: 1;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #16183e77;
+}
+.modal-content{
+    padding: 30px;
+    color: #16183E;
+    background-color: white;
+    border-radius: 15px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: #16183E solid 5px;
+    border-right: #16183E solid 5px;
+    border-left: #2c67d4 solid 5px;
+    border-bottom: #2c67d4 solid 5px;
+}
+.modal-content h2{
+    font-size: 30px;
+    padding: 0 0 10 0;
+}
+.modal-content form{
+    padding-top: 10px;
+}
+.modal-content form .formInput{
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    border-top: #16183E solid 2px;
+    border-right: #16183E solid 2px;
+    border-left: #2c67d4 solid 2px;
+    border-bottom: #2c67d4 solid 2px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+.modal-content form .formInput input{
+    padding: 0 10px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+}
+.modal-content form .inputCheck{
+    margin-left: 2px;
+    display: flex;
+    flex-direction: row;
+}
+.modal-content form .inputCheck #inputIsComplete{
+    order: -1;
+    width: 18px;
+    margin-right: 8px;
+    accent-color: #2c67d4;
+}
+.modal-content form .inputButton{
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+}
+.modal-content form .inputButton button{
+    flex-grow: 1;
+    margin: 2px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    color: white;
+}
+button#close, button#closeEdit{
+    background-color: #c71c16;
+}
+button#submitBook {
+    background-color: #3b05ff;
+}
+/*footer*/
+footer {
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: white;
+    position: fixed;
+}
+
+footer h3 {
+    color: #16183E;
+}
